@@ -1,13 +1,9 @@
-
-import 'package:check/Setup/calculator.dart';
-import 'package:check/Setup/photo.dart';
 import 'package:check/Setup/themeapply.dart';
 import 'package:flutter/material.dart';
-import '../Setup/currency.dart';
-import '../Weather/ui/WeatherScreen.dart';
+import '../Article/article.dart';
+import '../WeatherCurrent/weathercurrent.dart';
 
 class Home extends StatefulWidget {
-
 
   @override
   _HomeState createState() => _HomeState();
@@ -32,16 +28,11 @@ class _HomeState extends State<Home> {
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.explore),
-            label: 'Articles',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.add_sharp),
             label: 'Weather',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.bookmark),
-            icon: Icon(Icons.bookmark_border),
-            label: 'Calculator',
+            icon: Icon(Icons.add_sharp),
+            label: 'Articles',
           ),
           NavigationDestination(
             selectedIcon: Icon(Icons.ac_unit_sharp),
@@ -54,18 +45,14 @@ class _HomeState extends State<Home> {
         Container(
           color: Colors.white,
           alignment: Alignment.center,
-          child: const ArticleFinder(),
+          child: WeatherCurrent(),
           
         ),
         Container(
           color: Colors.white,
           alignment: Alignment.center,
-          child: WeatherScreen(),
-        ),
-        Container(
-          color: Colors.white,
-          alignment: Alignment.center,
-          child: Calculator(),
+          // child: WeatherScreen(),
+          child: const ArticleFinder(),
         ),
         Container(
           color: Colors.white,

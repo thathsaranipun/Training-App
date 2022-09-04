@@ -51,6 +51,9 @@ dependencies:
   flutter_svg: ^1.1.4
   flutter_custom_clippers: ^2.0.0
   lottie: ^1.4.2
+  flutter_bloc: any
+  bloc: any
+  json_annotation: ^4.6.0
 
 
 
@@ -78,7 +81,7 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/
+   - assets/images/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
